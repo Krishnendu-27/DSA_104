@@ -50,4 +50,3 @@ All content is based on the [C Programming Complete Course by College Wallah](ht
 
 ---
 
-**Feel free to explore the subfolders for code examples, notes, and practice problems for each topic.**
