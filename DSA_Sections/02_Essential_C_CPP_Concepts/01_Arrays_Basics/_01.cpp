@@ -1,1 +1,1 @@
-// Placeholder file for folder structure
+// Placeholder file for folder structure.
