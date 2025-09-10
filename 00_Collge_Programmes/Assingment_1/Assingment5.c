@@ -16,6 +16,7 @@ int main() {
         "arya"
     };
     struct student_name * p = & calss1;
+    printf("%s ", calss1.student1);
     strcpy(p -> student1, "ronit");
     printf("%s ", calss1.student1);
     return 0;

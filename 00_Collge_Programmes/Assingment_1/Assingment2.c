@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 
+#include <string.h>
+
 struct adress
 {
     char * city;
@@ -11,7 +13,7 @@ struct adress
     int pincode;
 };
 struct stduent_details {
-    char * name;
+    char name[100];
     int age;
     int roll;
     struct adress Adress;
@@ -20,7 +22,7 @@ struct stduent_details {
 int main() {
     struct stduent_details student2;
     student2.age = 10;
-    student2.name = "naruto";
+    strcpy(student2.name, "naruto");
     student2.roll = 2;
     student2.Adress.city = "konoha";
     student2.Adress.po = "cloud village";
