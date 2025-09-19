@@ -5,7 +5,7 @@
 
 struct Array
 {
-    int * A;
+    int * A; 
     int size;
     int length;
 };
