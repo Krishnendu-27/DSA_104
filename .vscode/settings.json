@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "05_max-of-all-element": "c"
   }
 }
