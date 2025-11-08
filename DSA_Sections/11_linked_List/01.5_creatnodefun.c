@@ -18,14 +18,29 @@ void printList(struct Node *head) {
   }
   printf("NULL");
 }
+struct Node *createLinkList(int arr[], int length) {
+  if (length == 0) {
+    return NULL;
+  }
+  struct Node *head = creatnode(arr[0]);
+  struct Node *current = head;
+  for (int i = 1; i < length; i++) {
+    current->next = creatnode(arr[i]);
+    current = current->next;
+  }
+  return head;
+};
 int main() {
-  struct Node *first = creatnode(5);
+  /*
+  structruct Node *first = creatnode(5);
   struct Node *seconed = creatnode(10);
   first->next = seconed;
   struct Node *third = creatnode(100);
   seconed->next = third;
-
-  printList(first);
-
+  */
+  int arr[] = {1, 4, 5, 63, 8, 5, 8, 74, 2, 5};
+  int length = 10;
+  struct Node *p = createLinkList(arr, length);
+  printList(p);
   return 0;
 }
