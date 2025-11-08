@@ -2,29 +2,39 @@
 #include <stdlib.h>
 
 int main() {
-  int A[] = {1,2,3,10,20,30};
-  int length1 = sizeof(A) / sizeof(A[0]);
-  int B[] = {4,5,6,6,88,1};
-  int C[12];
-  int i = 0, j = 0, k = 0;
-
-  while(i<length1 && j<length1) 
-  {
-    if (A[i]<B[j])
-    {
-        C[k]= B[j] ;
-        k++;
-        j++;
-    }
-    else{
-        C[i]= A[i];
-        k++;
-        i++;
-      }
+    int A[] = {1, 2, 3, 10, 20, 30};
+    int B[] = {4, 5, 6, 6, 88, 100};
     
-  }
-    for (int i = 0; i < (length1*2)-1; i++) {
-        printf("%d ", C[i]);
+    int length1 = sizeof(A) / sizeof(A[0]);
+    int length2 = sizeof(B) / sizeof(B[0]);
+    int C[length1 + length2];
+
+    int i = 0, j = 0, k = 0;
+
+    // Merge both arrays
+    while (i < length1 && j < length2) {
+        if (A[i] < B[j]) {
+            C[k++] = A[i++];
+        } else {
+            C[k++] = B[j++];
+        }
     }
-  return 0;
+
+    // Copy remaining elements of A (if any)
+    while (i < length1) {
+        C[k++] = A[i++];
+    }
+
+    // Copy remaining elements of B (if any)
+    while (j < length2) {
+        C[k++] = B[j++];
+    }
+
+    // Print merged array
+    printf("Merged Array: ");
+    for (int x = 0; x < length1 + length2; x++) {
+        printf("%d ", C[x]);
+    }
+
+    return 0;
 }
