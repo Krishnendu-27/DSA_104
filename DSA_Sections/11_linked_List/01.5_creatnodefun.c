@@ -4,13 +4,14 @@ struct Node {
   int data;
   struct Node *next;
 };
+// creating linekd list node
 struct Node *creatnode(int val) {
   struct Node *newnode = (struct Node *)malloc(sizeof(struct Node));
-  //  struct Node *newnode = struct node* malloc(sizeof(struct Node));
   newnode->data = val;
   newnode->next = NULL;
   return newnode;
 };
+// printing linked list
 void printList(struct Node *head) {
   while (head != NULL) {
     printf("%d -> ", head->data);
@@ -18,6 +19,7 @@ void printList(struct Node *head) {
   }
   printf("NULL");
 }
+// creating linekd list
 struct Node *createLinkList(int arr[], int length) {
   if (length == 0) {
     return NULL;
